@@ -14,7 +14,8 @@ led9.showColor(neopixel.colors(NeoPixelColors.Violet))
 led5.showColor(neopixel.colors(NeoPixelColors.Violet))
 led16.showColor(neopixel.colors(NeoPixelColors.Yellow))
 led18.showColor(neopixel.colors(NeoPixelColors.Yellow))
-loops.everyInterval(1000, function () {
+for (let index = 0; index < 4; index++) {
+    strip.showColor(neopixel.colors(NeoPixelColors.Green))
     led16.showColor(neopixel.colors(NeoPixelColors.Violet))
     led18.showColor(neopixel.colors(NeoPixelColors.Violet))
     led0.showColor(neopixel.colors(NeoPixelColors.Yellow))
@@ -33,4 +34,8 @@ loops.everyInterval(1000, function () {
     led4.showColor(neopixel.colors(NeoPixelColors.Green))
     rij2.showColor(neopixel.colors(NeoPixelColors.Green))
     basic.pause(2000)
-})
+    for (let index = 0; index < 25; index++) {
+        strip.shift(1)
+        basic.pause(100)
+    }
+}
